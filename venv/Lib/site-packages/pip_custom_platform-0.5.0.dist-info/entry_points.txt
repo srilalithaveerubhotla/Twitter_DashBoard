@@ -1,0 +1,9 @@
+[console_scripts]
+pip-custom-platform = pip_custom_platform.main:main
+
+[pymonkey]
+pip-custom-platform = pip_custom_platform.pymonkey
+
+[pymonkey.argparse]
+pip-custom-platform = pip_custom_platform.pymonkey
+

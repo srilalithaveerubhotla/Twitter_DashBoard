@@ -1,0 +1,30 @@
+Metadata-Version: 2.0
+Name: Flask-OAuthRes
+Version: 0.2.0
+Summary: OAuth Resource for Flask
+Home-page: https://github.com/socialwifi/flask-oauthres
+Author: Lukasz Marcin Podkalicki
+Author-email: lukasz.podkalicki@socialwifi.com
+License: BSD
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Flask
+Requires-Dist: requests (>=2.10)
+
+UNKNOWN
+
+

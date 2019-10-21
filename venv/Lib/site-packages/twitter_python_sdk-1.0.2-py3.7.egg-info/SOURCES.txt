@@ -1,0 +1,12 @@
+MANIFEST.in
+requirements.txt
+setup.cfg
+setup.py
+twitter/__init__.py
+twitter/api.py
+twitter/exceptions.py
+twitter_python_sdk.egg-info/PKG-INFO
+twitter_python_sdk.egg-info/SOURCES.txt
+twitter_python_sdk.egg-info/dependency_links.txt
+twitter_python_sdk.egg-info/requires.txt
+twitter_python_sdk.egg-info/top_level.txt

@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: platform-ai
+Version: 0.0.1
+Summary: Prediction API client for Python
+Home-page: https://github.com/pypa/sampleproject
+Author: Arshak Navruzyan
+Author-email: arshak@platform.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# prediction-api
+
+- App will receive an HTTP POST call in this format
+
+```
+curl -X POST
+    -H 'Authorization: Key API_KEY'
+    -H "Content-Type: application/json"
+    -d '
+    {
+      "inputs": [
+        {
+          "data": {
+            "image": {
+              "url": "https://lh3.googleusercontent.com/GNE-0Vga-Uffz1i9oxP0ueYYvPW8qG_z7_IlQX3yCqPNILam2Z-rlkYzjoRGkPp74XeEkVb96r1-N1-yRKGhvkFQK5uI=s256"
+            }
+          }
+        }
+      ]
+    }'
+    https://prediction-api-dot-platform-ai-dev.appspot.com/v1/project?id=ahFzfnBsYXRmb3JtLWFpLWRldnJTCxIEVXNlciIcMGFXdExZREhlU1puZ3F1SUxpYXUzQ0NFQ1FFMgwLEgdQcm9qZWN0IiA2MmEwMjYyYjNiYTI0NDA4OGNlYTgyYjg0MTQ1MDg3Mww
+```
+- Since this is a multi-tenant application and we cannot redploy it (or use the same key for multi customers), in order to turn on a new tenant, API keys need to be managed in Google Data Store. Project type in Datastore has a reference to valid API keys that can access it for prediction.
+- Import model_utilities from platform-ai package (TBD)
+
+    `model = get_model(project_id)`  
+    `model.predict_from_url(URL) returns prediction json`
+
+- cache the model in memorystore for future requests, backend will invalidate this cache if/when the model is retrained
+
+### Error codes
+
+- Bad URL / not accessible
+- project_id invalid
+- rate limit exceeded
+- no trained model is available
+- backend error / something blew up
+
+

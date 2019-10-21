@@ -1,0 +1,10 @@
+flask
+urllib3
+jsonschema
+PyJWT
+
+[dev]
+setuptools
+Sphnix
+
+[test]

@@ -1,0 +1,3 @@
+[console_scripts]
+unittest-utils = unittest_utils.main:_main
+
